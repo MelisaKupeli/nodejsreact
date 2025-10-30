@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+/* User bileşeni içindeki yazılar için genel stil */
+.user {
+  color: #8a2be2; /* mor tonunda bir renk */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* H1 biraz daha büyük ve dikkat çekici olsun */
+.user h1 {
+  font-size: 2rem;
+  color: #ff1493; /* pembe */
+}
+
+/* Yaş ve e-posta daha sade görünsün */
+.user h2 {
+  color:#ff6600
+}
+
+.user h3 {
+  color:aquamarine
+}
+
+/* Hover efekti: fare üstüne gelince yazı rengi değişsin */
+.user:hover {
+  color: #ff6600;
+  transition: color 0.5s ease;
+}
+
+.user2 {
+  color: #228b22; /* yeşil tonunda bir renk */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.user p {
+  font-size: 1.2rem;
+  color:#8a2be2;
+}
+
