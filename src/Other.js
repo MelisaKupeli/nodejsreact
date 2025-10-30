@@ -1,11 +1,11 @@
  import { useState } from "react";
- import { User, User2 } from "./Users";
+
  export
  const Other =() => {
     
  const [age, setAge] = useState(0);
   const isAdult = age >= 18;
-  const times = [1,2,3];
+  
 
   const increaseAge = () => {
     setAge(age + 1);
@@ -35,17 +35,9 @@
 
       <p style={{color:'orange', fontWeight:'bold'}}>{isAdult ? "Is adult:" : "Is not adult:"}</p>
      
-      {times.map((_, index) =>(
-        <div key={index}>
-          <User2/>
-        </div>
-        ))
-      }
+     
       
-     <div>
-        <User name = "Mell" age={15} email="xxdx@gmail.com"/>
-        <User name = "Melisa" age={18} email="xxd@gmail.com"/>
-     </div>
+  
     </div>
   )
 }
