@@ -16,19 +16,35 @@ import { useState , createContext} from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Form } from './components/Form';
 import { useToggle , useToggle2} from './CustomHooks/useToogle';
+import { Person } from './components/Person';
+import { Friends } from './components/Friends';
 
 export const AppContext = createContext();
 
 function App() {   
   const {state:isVisible, toggle} = useToggle();
+  const friends = ["Melisa", "Mell", "Meral"];
 
 return (    
     <div className="App">
+      <Person 
+        name="Mery"
+        email="mery@gmail.com"
+        age={30}
+        isMarried={false}
+        onToggle={toggle}
+        isVisible={isVisible}
+        
+       />
       <button onClick={toggle}>
-        {isVisible ? "Hide Form" : "Show Form"}
+        {isVisible ? "Hide Friends" : "Show Friends"}
       </button>
       
-      {isVisible && <h1>Hide Text</h1>}
+      {isVisible && <ul>
+          {friends.map((f, index) => (
+            <li key={index}>{f}</li>
+          ))}
+        </ul>}
 
       {/*<Form/>*/}
     </div>
